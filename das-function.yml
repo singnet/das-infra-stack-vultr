@@ -1,0 +1,30 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  insert-data-mongo:
+    git_url: https://github.com/levisingularity/DAS-function
+    git_ref: v1 #put the release tag version
+    lang: python3
+    handler: ../DAS-function/insert-data-mongo
+    image: 038760728819.dkr.ecr.us-east-1.amazonaws.com/das:insert-data-mongo
+  insert-data-redis:
+    git_url: https://github.com/levisingularity/DAS-function
+    git_ref: v0.1.8 #put the release tag version
+    lang: python3
+    handler: ../DAS-function/insert-data-redis
+    image: 038760728819.dkr.ecr.us-east-1.amazonaws.com/das:insert-data-redis
+  list-data-mongo:
+    git_url: https://github.com/levisingularity/DAS-function
+    git_ref: v0.1.8 #put the release tag version
+    lang: python3
+    handler: ../DAS-function/list-data-mongo
+    image: 038760728819.dkr.ecr.us-east-1.amazonaws.com/das:list-data-mongo
+  list-data-redis:
+    git_url: https://github.com/levisingularity/DAS-function
+    git_ref: v0.1.8 #put the release tag version
+    lang: python3
+    handler: ../DAS-function/list-data-redis
+    image: 038760728819.dkr.ecr.us-east-1.amazonaws.com/das:list-data-redis
+
