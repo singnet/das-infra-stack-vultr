@@ -3,43 +3,39 @@ provider:
   name: openfaas
   gateway: http://127.0.0.1:8080
 functions:
-  insert-data-mongo:
-    git_url: https://github.com/levisingularity/DAS-function
-    git_ref: v1 #put the release tag version
+  das:
     lang: python3
-    handler: ../DAS-function/insert-data-mongo
-    image: trueagi/das:insert-data-mongo
-    environment_file:
-      - mongodb-variables.yml
-    # secrets:
-    #   - mongodb
-  insert-data-redis:
-    git_url: https://github.com/levisingularity/DAS-function
-    git_ref: v0.1.8 #put the release tag version
-    lang: python3
-    handler: ../DAS-function/insert-data-redis
-    image: trueagi/das:insert-data-redis
-    environment_file:
-      - redis-variables.yml
-    # secrets:
-    #   - redis
+    handler: ./das
+    image: trueagi/das:das
+    environment:
+      read_timeout: 300s
+      write_timeout: 300s
+      exec_timeout: 300s
+      DAS_MONGODB_HOSTNAME: "144.202.110.176"
+      DAS_MONGODB_PORT: "27018"
+      DAS_DATABASE_USERNAME: "dbadmin"
+      DAS_DATABASE_PASSWORD: "dassecret"
+      DAS_DATABASE_NAME: "das"
+      DAS_REDIS_HOSTNAME: "149.28.223.231"
+      DAS_REDIS_PORT: "7000"
+
   list-data-mongo:
-    git_url: https://github.com/levisingularity/DAS-function
-    git_ref: v0.1.8 #put the release tag version
     lang: python3
-    handler: ../DAS-function/list-data-mongo
+    handler: ./DAS-function/list-data-mongo
     image: trueagi/das:list-data-mongo
-    environment_file:
-      - mongodb-variables.yml
-    # secrets:
-    #   - mongodb
+    environment:
+      DAS_MONGODB_HOSTNAME: "144.202.110.176"
+      DAS_MONGODB_PORT: "27018"
+      DAS_DATABASE_USERNAME: "dbadmin"
+      DAS_DATABASE_PASSWORD: "dassecret"
+      DAS_DATABASE_NAME: "das"
+
   list-data-redis:
-    git_url: https://github.com/levisingularity/DAS-function
-    git_ref: v0.1.8 #put the release tag version
     lang: python3
-    handler: ../DAS-function/list-data-redis
+    handler: ./DAS-function/list-data-redis
     image: trueagi/das:list-data-redis
-    environment_file:
-      - redis-variables.yml
-    # secrets:
-    #   - mongodb
+    environment:
+      REDIS_HOST: "149.28.223.231"
+      REDIS_PORT: "7000"
+      REDIS_PASSWORD: ""
+      REDIS_USERNAME: ""
