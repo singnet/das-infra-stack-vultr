@@ -8,9 +8,9 @@ functions:
     handler: ./das
     image: trueagi/das:das
     environment:
-      read_timeout: 120
-      write_timeout: 120
-      exec_timeout: 0
+      read_timeout: 300s
+      write_timeout: 300s
+      exec_timeout: 300s
       DAS_MONGODB_HOSTNAME: "144.202.110.176"
       DAS_MONGODB_PORT: "27018"
       DAS_DATABASE_USERNAME: "dbadmin"
@@ -18,22 +18,6 @@ functions:
       DAS_DATABASE_NAME: "das"
       DAS_REDIS_HOSTNAME: "149.28.223.231"
       DAS_REDIS_PORT: "7000"
-
-  das-meetup:
-    lang: python3
-    handler: ./das
-    image: trueagi/das:das-meetup
-    environment:
-      read_timeout: 300s
-      write_timeout: 300s
-      exec_timeout: 300s
-      DAS_MONGODB_HOSTNAME: "144.202.98.50"
-      DAS_MONGODB_PORT: "27017"
-      DAS_DATABASE_USERNAME: ""
-      DAS_DATABASE_PASSWORD: ""
-      DAS_DATABASE_NAME: "das"
-      DAS_REDIS_HOSTNAME: "144.202.101.172"
-      DAS_REDIS_PORT: "6379"
 
   list-data-mongo:
     lang: python3
@@ -53,26 +37,5 @@ functions:
     environment:
       REDIS_HOST: "149.28.223.231"
       REDIS_PORT: "7000"
-      REDIS_PASSWORD: ""
-      REDIS_USERNAME: ""
-
-  list-data-mongo-meetup:
-    lang: python3
-    handler: ./DAS-function/list-data-mongo
-    image: trueagi/das:list-data-mongo-meetup
-    environment:
-      DAS_MONGODB_HOSTNAME: "144.202.98.50"
-      DAS_MONGODB_PORT: "27017"
-      DAS_DATABASE_USERNAME: ""
-      DAS_DATABASE_PASSWORD: ""
-      DAS_DATABASE_NAME: "das"
-
-  list-data-redis-meetup:
-    lang: python3
-    handler: ./DAS-function/list-data-redis
-    image: trueagi/das:list-data-redis-meetup
-    environment:
-      REDIS_HOST: "144.202.101.172"
-      REDIS_PORT: "6379"
       REDIS_PASSWORD: ""
       REDIS_USERNAME: ""
