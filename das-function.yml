@@ -1,7 +1,7 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: http://127.0.0.1:8080
+  gateway: http://127.0.0.1:8081
 functions:
   atomdb:
     lang: python3
@@ -11,11 +11,11 @@ functions:
       read_timeout: 300s
       write_timeout: 300s
       exec_timeout: 300s
-      das_mongodb_name: das
-      das_mongodb_port: 27018
-      das_redis_port: 7000
+      das-mongodb-name: das
+      das-mongodb-port: 27018
+      das-redis-port: 7000
     secrets:
-      - das_mongodb_hostname
-      - das_mongodb_username
-      - das_mongodb_password
-      - das_redis_hostname
+      - das-mongodb-hostname
+      - das-mongodb-username
+      - das-mongodb-password
+      - das-redis-hostname
