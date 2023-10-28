@@ -13,7 +13,7 @@ functions:
       exec_timeout: 300s
       dasmongodbname: das
       dasmongodbport: 27018
-      dasredisport: 7000
+      dasredisport: 6379
     secrets:
       - dasmongodbhostname
       - dasmongodbusername
