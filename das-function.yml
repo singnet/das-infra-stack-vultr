@@ -6,7 +6,7 @@ functions:
   atomdb:
     lang: python3
     handler: ../das-servless-functions
-    image: 038760728819.dkr.ecr.us-east-1.amazonaws.com/das:das-servless-functions
+    image: trueagi/das:das-servless-functions
     environment:
       read_timeout: 300s
       write_timeout: 300s
