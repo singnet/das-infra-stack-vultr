@@ -1,41 +1,21 @@
 version: 1.0
 provider:
   name: openfaas
-  gateway: http://127.0.0.1:8080
+  gateway: http://104.238.183.115:8081
 functions:
-  das:
+  atomdb:
     lang: python3
-    handler: ./das
-    image: trueagi/das:das
+    handler: ../das-servless-functions
+    image: trueagi/das:das-servless-functions
     environment:
       read_timeout: 300s
       write_timeout: 300s
       exec_timeout: 300s
-      DAS_MONGODB_HOSTNAME: "144.202.110.176"
-      DAS_MONGODB_PORT: "27018"
-      DAS_DATABASE_USERNAME: "dbadmin"
-      DAS_DATABASE_PASSWORD: "dassecret"
-      DAS_DATABASE_NAME: "das"
-      DAS_REDIS_HOSTNAME: "149.28.223.231"
-      DAS_REDIS_PORT: "7000"
-
-  list-data-mongo:
-    lang: python3
-    handler: ./DAS-function/list-data-mongo
-    image: trueagi/das:list-data-mongo
-    environment:
-      DAS_MONGODB_HOSTNAME: "144.202.110.176"
-      DAS_MONGODB_PORT: "27018"
-      DAS_DATABASE_USERNAME: "dbadmin"
-      DAS_DATABASE_PASSWORD: "dassecret"
-      DAS_DATABASE_NAME: "das"
-
-  list-data-redis:
-    lang: python3
-    handler: ./DAS-function/list-data-redis
-    image: trueagi/das:list-data-redis
-    environment:
-      REDIS_HOST: "149.28.223.231"
-      REDIS_PORT: "7000"
-      REDIS_PASSWORD: ""
-      REDIS_USERNAME: ""
+      dasmongodbname: das
+      dasmongodbport: 27018
+      dasredisport: 6379
+    secrets:
+      - dasmongodbhostname
+      - dasmongodbusername
+      - dasmongodbpassword
+      - dasredishostname
