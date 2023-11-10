@@ -11,11 +11,11 @@ functions:
       read_timeout: 300s
       write_timeout: 300s
       exec_timeout: 300s
-      dasmongodbname: das
-      dasmongodbport: 27018
-      dasredisport: 6379
     secrets:
       - dasmongodbhostname
       - dasmongodbusername
       - dasmongodbpassword
+      - dasmongodbname
+      - dasmongodbport
       - dasredishostname
+      - dasredisport
