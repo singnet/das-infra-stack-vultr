@@ -22,7 +22,7 @@ functions:
 
   query-engine:
     lang: python3
-    handler: ../das-servless-functions
+    handler: ../das-servless-functions/das-query-engine
     image: trueagi/das:das-query-engine
     environment:
       read_timeout: 300s
