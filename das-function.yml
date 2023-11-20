@@ -3,10 +3,27 @@ provider:
   name: openfaas
   gateway: http://104.238.183.115:8081
 functions:
-  atomdb:
+  # atomdb:
+  #   lang: python3
+  #   handler: ../das-servless-functions
+  #   image: trueagi/das:das-atom-db
+  #   environment:
+  #     read_timeout: 300s
+  #     write_timeout: 300s
+  #     exec_timeout: 300s
+  #   secrets:
+  #     - dasmongodbhostname
+  #     - dasmongodbusername
+  #     - dasmongodbpassword
+  #     - dasmongodbname
+  #     - dasmongodbport
+  #     - dasredishostname
+  #     - dasredisport
+
+  query-engine:
     lang: python3
     handler: ../das-servless-functions
-    image: trueagi/das:das-servless-functions
+    image: trueagi/das:das-query-engine
     environment:
       read_timeout: 300s
       write_timeout: 300s
@@ -14,8 +31,14 @@ functions:
       dasmongodbname: das
       dasmongodbport: 27018
       dasredisport: 6379
+      dasuserediscluster: false
+      dasusecachednodes: false
+      dasusecachedlinktypes: false
+      dasusecachednodetypes: false
     secrets:
       - dasmongodbhostname
       - dasmongodbusername
       - dasmongodbpassword
       - dasredishostname
+      - dasredispassword
+      - dasredisusername
