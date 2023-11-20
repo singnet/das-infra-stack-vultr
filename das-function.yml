@@ -28,17 +28,17 @@ functions:
       read_timeout: 300s
       write_timeout: 300s
       exec_timeout: 300s
-      dasmongodbname: das
-      dasmongodbport: 27018
-      dasredisport: 6379
-      dasuserediscluster: false
-      dasusecachednodes: false
-      dasusecachedlinktypes: false
-      dasusecachednodetypes: false
     secrets:
       - dasmongodbhostname
-      - dasmongodbusername
+      - dasmongodbname
       - dasmongodbpassword
+      - dasmongodbport
+      - dasmongodbusername
       - dasredishostname
       - dasredispassword
+      - dasredisport
       - dasredisusername
+      - dasusecachedlinktypes
+      - dasusecachednodes
+      - dasusecachednodetypes
+      - dasuserediscluster
