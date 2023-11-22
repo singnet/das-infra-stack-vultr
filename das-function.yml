@@ -18,9 +18,7 @@ functions:
       - dasmongodbport
       - dasmongodbusername
       - dasredishostname
-      - dasredispassword
       - dasredisport
-      - dasredisusername
       - dasusecachedlinktypes
       - dasusecachednodes
       - dasusecachednodetypes
@@ -41,10 +39,9 @@ functions:
       - dasmongodbport
       - dasmongodbusername
       - dasredishostname
-      - dasredispassword
       - dasredisport
-      - dasredisusername
       - dasusecachedlinktypes
       - dasusecachednodes
       - dasusecachednodetypes
       - dasuserediscluster
+      - dasuseredisssl
