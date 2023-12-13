@@ -25,7 +25,7 @@ functions:
       - dasuserediscluster
 
   query-engine:
-    lang: python3
+    lang: python3-http
     handler: ../das-servless-functions/das-query-engine
     image: trueagi/das:das-query-engine
     environment:
