@@ -1,0 +1,43 @@
+---
+name: Vultr Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+
+jobs:
+  deploy-develop:
+    runs-on: ubuntu-latest
+    environment: develop
+    if: ${{ github.ref }} == refs/heads/develop
+    steps:
+      - name: Setup OpenFaaS
+        run: curl -sSL https://cli.openfaas.com | sudo -E sh
+
+      - name: Login to OpenFaaS Gateway
+        run: faas-cli login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} -g ${{ secrets.OPENFAAS_GATEWAY }}
+
+      - name: Pull template
+        run: faas-cli template pull https://github.com/singnet/das-openfaas-templates
+
+      - name: Deploy the function
+        run: faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: production
+    if: ${{ github.ref }} == refs/heads/master
+    steps:
+      - name: Setup OpenFaaS
+        run: curl -sSL https://cli.openfaas.com | sudo -E sh
+
+      - name: Login to OpenFaaS Gateway
+        run: faas-cli login -p ${{ secrets.OPENFAAS_GATEWAY_PASSWD }} -g ${{ secrets.OPENFAAS_GATEWAY }}
+
+      - name: Pull template
+        run: faas-cli template pull https://github.com/singnet/das-openfaas-templates
+
+      - name: Deploy the function
+        run: faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
