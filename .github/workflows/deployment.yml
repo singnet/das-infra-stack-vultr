@@ -6,13 +6,20 @@ on:
     branches:
       - master
       - develop
+      - feat/create-develop-env
+
+env:
+  DEPLOYMENT_FILE: das-function.yml
 
 jobs:
   deploy-develop:
     runs-on: ubuntu-latest
     environment: develop
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/feat/create-develop-env'
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Setup OpenFaaS
         run: curl -sSL https://cli.openfaas.com | sudo -E sh
 
@@ -23,13 +30,18 @@ jobs:
         run: faas-cli template pull https://github.com/singnet/das-openfaas-templates
 
       - name: Deploy the function
-        run: faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
+        run: FAAS_GATEWAY=${{ secrets.OPENFAAS_GATEWAY }} faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
 
   deploy-production:
     runs-on: ubuntu-latest
     environment: production
     if: github.ref == 'refs/heads/master'
+    env:
+      DEPLOYMENT_FILE: das-function.yml
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Setup OpenFaaS
         run: curl -sSL https://cli.openfaas.com | sudo -E sh
 
@@ -40,4 +52,4 @@ jobs:
         run: faas-cli template pull https://github.com/singnet/das-openfaas-templates
 
       - name: Deploy the function
-        run: faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
+        run: FAAS_GATEWAY=${{ secrets.OPENFAAS_GATEWAY }} faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
