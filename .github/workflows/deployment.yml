@@ -11,7 +11,7 @@ jobs:
   deploy-develop:
     runs-on: ubuntu-latest
     environment: develop
-    if: ${{ github.ref }} == refs/heads/develop
+    if: github.ref == 'refs/heads/develop'
     steps:
       - name: Setup OpenFaaS
         run: curl -sSL https://cli.openfaas.com | sudo -E sh
@@ -28,7 +28,7 @@ jobs:
   deploy-production:
     runs-on: ubuntu-latest
     environment: production
-    if: ${{ github.ref }} == refs/heads/master
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Setup OpenFaaS
         run: curl -sSL https://cli.openfaas.com | sudo -E sh
