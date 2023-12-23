@@ -6,24 +6,16 @@ functions:
   query-engine:
     lang: python3-http
     image: trueagi/das:v1.3.4-queryengine
+    handler: ./das-query-engine
     environment:
       read_timeout: 500s
       write_timeout: 500s
       exec_timeout: 500s
       upstream_timeout: 500s
-      DAS_USE_CACHED_NODES: false
-      DAS_USE_CACHED_LINK_TYPES: false
-      DAS_USE_CACHED_NODE_TYPES: false
-    secrets:
-      - dasmongodbhostname
-      - dasmongodbname
-      - dasmongodbpassword
-      - dasmongodbport
-      - dasmongodbusername
-      - dasredishostname
-      - dasredisport
-      - dasusecachedlinktypes
-      - dasusecachednodes
-      - dasusecachednodetypes
-      - dasuserediscluster
-      - dasuseredisssl
+      DAS_MONGODB_HOSTNAME: ${DAS_MONGODB_HOSTNAME}
+      DAS_MONGODB_PORT: ${DAS_MONGODB_PORT}
+      DAS_MONGODB_USERNAME: ${DAS_MONGODB_USERNAME}
+      DAS_MONGODB_PASSWORD: ${DAS_MONGODB_PASSWORD}
+      DAS_MONGODB_NAME: ${DAS_MONGODB_NAME}
+      DAS_REDIS_HOSTNAME: ${DAS_REDIS_HOSTNAME}
+      DAS_REDIS_PORT: ${DAS_REDIS_PORT}
