@@ -51,4 +51,13 @@ jobs:
         run: faas-cli template pull https://github.com/singnet/das-openfaas-templates
 
       - name: Deploy the function
-        run: FAAS_GATEWAY=${{ secrets.OPENFAAS_GATEWAY }} faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
+        run: |-
+          FAAS_GATEWAY=${{ secrets.OPENFAAS_GATEWAY }} \
+          DAS_MONGODB_HOSTNAME=${{secrets.DAS_MONGODB_HOSTNAME}} \
+          DAS_MONGODB_PORT=${{secrets.DAS_MONGODB_PORT}} \
+          DAS_MONGODB_USERNAME=${{secrets.DAS_MONGODB_USERNAME}} \
+          DAS_MONGODB_PASSWORD=${{secrets.DAS_MONGODB_PASSWORD}} \
+          DAS_MONGODB_NAME=${{secrets.DAS_MONGODB_NAME}} \
+          DAS_REDIS_HOSTNAME=${{secrets.DAS_REDIS_HOSTNAME}} \
+          DAS_REDIS_PORT=${{secrets.DAS_REDIS_PORT}} \
+          faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
