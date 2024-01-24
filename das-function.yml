@@ -5,7 +5,7 @@ provider:
 functions:
   query-engine:
     lang: python3-http
-    image: trueagi/das:v1.5.0-queryengine
+    image: trueagi/das:v1.9.1-queryengine
     handler: ./das-query-engine
     environment:
       read_timeout: 500s
