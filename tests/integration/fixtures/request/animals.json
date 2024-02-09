@@ -1,0 +1,45 @@
+{
+  "get_atom": {
+    "handle": "af12f10f9ae2002a1607ba0b47ba8407"
+  },
+  "get_node": {
+    "node_type": "Concept",
+    "node_name": "human"
+  },
+  "get_link": {
+    "link_type": "Similarity",
+    "link_targets": [
+      "af12f10f9ae2002a1607ba0b47ba8407",
+      "1cdffc6b0b89ff41d68bec237481d1e1"
+    ]
+  },
+  "get_links": {
+    "link_type": "Inheritance",
+    "link_targets": [
+      "4e8e26e3276af8a5c2ac2cc2dc95c6d2",
+      "80aff30094874e75028033a38ce677bb"
+    ]
+  },
+  "query": {
+    "query": {
+      "atom_type": "link",
+      "type": "Similarity",
+      "targets": [
+        {
+          "atom_type": "node",
+          "type": "Concept",
+          "name": "human"
+        },
+        {
+          "atom_type": "node",
+          "type": "Concept",
+          "name": "monkey"
+        }
+      ]
+    }
+  },
+  "get_incoming_links": {
+    "atom_handle": "af12f10f9ae2002a1607ba0b47ba8407",
+    "targets_document": true
+  }
+}
