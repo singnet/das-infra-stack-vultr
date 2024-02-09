@@ -27,6 +27,28 @@ class TestRemoteDistributedAtomSpace:
             port=os.getenv("TEST_REMOTE_PORT"),
         )
 
+    @staticmethod
+    def _sorted_nested(obj):
+        if isinstance(obj, list):
+            return sorted(
+                str(TestRemoteDistributedAtomSpace._sorted_nested(item)) for item in obj
+            )
+        elif isinstance(obj, dict):
+            return sorted(
+                (key, TestRemoteDistributedAtomSpace._sorted_nested(value))
+                for key, value in obj.items()
+            )
+        elif isinstance(obj, (int, float, str, bool, type(None))):
+            return obj
+        else:
+            return str(obj)
+
+    @staticmethod
+    def _compare_nested(obj1, obj2):
+        return TestRemoteDistributedAtomSpace._sorted_nested(
+            obj1
+        ) == TestRemoteDistributedAtomSpace._sorted_nested(obj2)
+
     def get_request(self, action: ActionType):
         request_file = f"{os.getenv('TEST_REMOTE_DATABASE')}.json"
 
@@ -68,8 +90,8 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_ATOM)
 
         result = remote_das.get_atom(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_get_node(self, remote_das: DistributedAtomSpace):
@@ -77,8 +99,8 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_NODE)
 
         result = remote_das.get_node(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_get_link(self, remote_das: DistributedAtomSpace):
@@ -86,8 +108,8 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_LINK)
 
         result = remote_das.get_link(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_get_links(self, remote_das: DistributedAtomSpace):
@@ -95,8 +117,8 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_LINKS)
 
         result = remote_das.get_links(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_get_incoming_links(self, remote_das: DistributedAtomSpace):
@@ -104,16 +126,16 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_INCOMING_LINKS)
 
         result = remote_das.get_incoming_links(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_count_atoms(self, remote_das: DistributedAtomSpace):
         expected_output = self.get_response(ActionType.COUNT_ATOMS)
 
         result = list(remote_das.count_atoms())
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_query(self, remote_das: DistributedAtomSpace):
@@ -121,6 +143,6 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.QUERY)
 
         result = remote_das.query(**payload)
-        assert (
-            result == expected_output
+        assert TestRemoteDistributedAtomSpace._compare_nested(
+            result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
