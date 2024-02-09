@@ -42,8 +42,8 @@
     }
   ],
   "query": [
-    null,
     [
+      null,
       {
         "handle": "e133d5f7238aece77acdd5e278234d6e",
         "type": "Execution",
