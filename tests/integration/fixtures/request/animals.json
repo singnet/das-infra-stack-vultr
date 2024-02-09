@@ -36,7 +36,8 @@
           "name": "monkey"
         }
       ]
-    }
+    },
+    "parameters": { "no_iterator": true }
   },
   "get_incoming_links": {
     "atom_handle": "af12f10f9ae2002a1607ba0b47ba8407",

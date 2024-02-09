@@ -33,7 +33,8 @@
         },
         { "atom_type": "variable", "name": "v1" }
       ]
-    }
+    },
+    "parameters": { "no_iterator": true }
   },
   "get_incoming_links": {
     "atom_handle": "ca45e09ce8182135be0ba20e8e9552b9",
