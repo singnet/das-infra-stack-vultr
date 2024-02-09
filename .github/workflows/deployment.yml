@@ -40,6 +40,25 @@ jobs:
           DAS_REDIS_PORT=${{secrets.DAS_REDIS_PORT}} \
           faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
 
+  testing-develop:
+    runs-on: ubuntu-latest
+    environment: develop
+    if: github.ref == 'refs/heads/develop'
+    needs: deploy-develop
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install requirements
+        run: pip3 install -r requirements.txt
+
+      - name: Run integration tests
+        run: |-
+          TEST_REMOTE_HOST=${{ vars.TEST_REMOTE_HOST }} \
+          TEST_REMOTE_PORT=${{ vars.TEST_REMOTE_PORT }} \
+          TEST_REMOTE_DATABASE=${{ vars.TEST_REMOTE_DATABASE }} \
+          make integration-tests
+
   deploy-production:
     runs-on: ubuntu-latest
     environment: production
@@ -70,3 +89,22 @@ jobs:
           DAS_REDIS_HOSTNAME=${{secrets.DAS_REDIS_HOSTNAME}} \
           DAS_REDIS_PORT=${{secrets.DAS_REDIS_PORT}} \
           faas-cli deploy -f ${{ env.DEPLOYMENT_FILE }}
+
+  testing-production:
+    runs-on: ubuntu-latest
+    environment: production
+    if: github.ref == 'refs/heads/master'
+    needs: deploy-production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install requirements
+        run: pip3 install -r requirements.txt
+
+      - name: Run integration tests
+        run: |-
+          TEST_REMOTE_HOST=${{ vars.TEST_REMOTE_HOST }} \
+          TEST_REMOTE_PORT=${{ vars.TEST_REMOTE_PORT }} \
+          TEST_REMOTE_DATABASE=${{ vars.TEST_REMOTE_DATABASE }} \
+          make integration-tests

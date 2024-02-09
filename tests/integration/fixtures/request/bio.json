@@ -1,0 +1,42 @@
+{
+  "get_atom": {
+    "handle": "e5032e6240ebe320f0c592daf9e3995f"
+  },
+  "get_node": {
+    "node_type": "Verbatim",
+    "node_name": "CG43315-PA"
+  },
+  "get_link": {
+    "link_type": "Inheritance",
+    "link_targets": [
+      "ca45e09ce8182135be0ba20e8e9552b9",
+      "05775a711209b2d4011e545b34ac02d0"
+    ]
+  },
+  "get_links": {
+    "link_type": "Inheritance",
+    "link_targets": [
+      "ca45e09ce8182135be0ba20e8e9552b9",
+      "05775a711209b2d4011e545b34ac02d0"
+    ]
+  },
+  "query": {
+    "query": {
+      "atom_type": "link",
+      "type": "Execution",
+      "targets": [
+        { "atom_type": "variable", "name": "v0" },
+        {
+          "atom_type": "node",
+          "type": "Verbatim",
+          "name": "Scer\\GAL4[Mef2.PR] CG3434[GD10969]"
+        },
+        { "atom_type": "variable", "name": "v1" }
+      ]
+    }
+  },
+  "get_incoming_links": {
+    "atom_handle": "ca45e09ce8182135be0ba20e8e9552b9",
+    "targets_document": true
+  }
+}
