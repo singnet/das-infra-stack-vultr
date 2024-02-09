@@ -42,8 +42,8 @@
     }
   ],
   "query": [
-    null,
     [
+      null,
       {
         "handle": "bad7472f41a0e7d601ca294eb4607c3a",
         "type": "Similarity",
