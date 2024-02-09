@@ -1,1 +1,3 @@
 vultr-openfaas-ssh-key
+__pycache__
+.pytest_cache
