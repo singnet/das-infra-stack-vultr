@@ -125,7 +125,10 @@ class TestRemoteDistributedAtomSpace:
         payload = self.get_request(ActionType.GET_INCOMING_LINKS)
         expected_output = self.get_response(ActionType.GET_INCOMING_LINKS)
 
-        result = remote_das.get_incoming_links(**payload)
+        result_it = remote_das.get_incoming_links(**payload)
+        
+        result = [r for r in result_it]
+        
         assert TestRemoteDistributedAtomSpace._compare_nested(
             result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
