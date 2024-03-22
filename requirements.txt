@@ -1,2 +1,2 @@
 pytest==7.4.3
-hyperon-das==0.5.0
+hyperon-das==0.5.6
