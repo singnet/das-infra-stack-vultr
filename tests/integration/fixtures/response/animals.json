@@ -1,312 +1,1215 @@
 {
-  "count_atoms": [14, 26],
-  "get_atom": {
-    "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-    "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-    "name": "human",
-    "named_type": "Concept",
-    "type": "Concept"
-  },
-  "get_node": {
-    "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-    "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-    "name": "human",
-    "named_type": "Concept",
-    "type": "Concept"
-  },
-  "get_link": {
-    "handle": "bad7472f41a0e7d601ca294eb4607c3a",
-    "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-    "is_toplevel": true,
-    "composite_type": [
-      "a9dea78180588431ec64d6bc4872fdbc",
-      "d99a604c79ce3c2e76a2f43488d5d4c3",
-      "d99a604c79ce3c2e76a2f43488d5d4c3"
+    "count_atoms": [
+        23,
+        60
     ],
-    "named_type": "Similarity",
-    "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-    "targets": [
-      "af12f10f9ae2002a1607ba0b47ba8407",
-      "1cdffc6b0b89ff41d68bec237481d1e1"
-    ],
-    "type": "Similarity"
-  },
-  "get_links": [
-    {
-      "handle": "ee1c03e6d1f104ccd811cfbba018451a",
-      "type": "Inheritance",
-      "targets": [
-        "4e8e26e3276af8a5c2ac2cc2dc95c6d2",
-        "80aff30094874e75028033a38ce677bb"
-      ]
-    }
-  ],
-  "query": [
-    [
-      null,
-      {
-        "handle": "bad7472f41a0e7d601ca294eb4607c3a",
-        "type": "Similarity",
+    "get_atom": {
+        "handle": "0bde3a43e8650ca16b0a052c9199e5b6",
+        "type": "Symbol",
+        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+        "name": "\"dinosaur\"",
+        "named_type": "Symbol",
+        "is_literal": true
+    },
+    "get_node": {
+        "handle": "8860480382d0ddf62623abf5c860e51d",
+        "type": "Symbol",
+        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+        "name": "\"human\"",
+        "named_type": "Symbol",
+        "is_literal": true
+    },
+    "get_link": {
+        "handle": "1e6aeff9e032c33b6cf87f43c581abf6",
+        "type": "MettaType",
+        "composite_type_hash": "bfa6ab71230b8d98cc24075ead8e31e2",
+        "is_toplevel": false,
+        "composite_type": [
+            "d08cb315065d08eee7d57f0466304623",
+            "02c86eb2792f3262c21d030a87e19793",
+            "02c86eb2792f3262c21d030a87e19793"
+        ],
+        "named_type": "MettaType",
+        "named_type_hash": "d08cb315065d08eee7d57f0466304623",
         "targets": [
-          {
-            "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-            "type": "Concept",
-            "name": "human"
-          },
-          {
-            "handle": "1cdffc6b0b89ff41d68bec237481d1e1",
-            "type": "Concept",
-            "name": "monkey"
-          }
+            "a408f6dd446cdd4fa56f82e77fe6c870",
+            "5e50ef7542bb0fde52aed0d841335790"
         ]
-      }
+    },
+    "get_links": [
+        0,
+        [
+            {
+                "handle": "289476dbf62faffc149e3658bc368b6b",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "8860480382d0ddf62623abf5c860e51d",
+                    "a408f6dd446cdd4fa56f82e77fe6c870"
+                ]
+            },
+            {
+                "handle": "328f72f4a6992aa47d33e70d868468ce",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "f6ed66944ab28b7d32a122f3d310b96f",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "4e5503971af4768dc3729de9e846a86d"
+                ]
+            },
+            {
+                "handle": "4390cc405c351b93ee39d6bc25cf9b3b",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "8d4f508af54497ea5f04112b1c66d1c5",
+                    "8321bf987d14e3ccbf9aaa6dad1e4755"
+                ]
+            },
+            {
+                "handle": "792a4094485a747cdebc8ddcb252c595",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "665509d366ac3c2821b3b6b266f996bd",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "eceb678b432dbfa82519674011cdbedf",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "a0426b36b0da5123b25ae7ef8fdf44bb",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "94c1c13573912bfe28802ef01834121b",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "1fc9300891b7a5d6583f0f85a83b9ddb",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "06b1200d19402202e31e059c15c51c36",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "25bdf4cba0b59adfa07dd103d033bca9",
+                    "1fc9300891b7a5d6583f0f85a83b9ddb"
+                ]
+            },
+            {
+                "handle": "2a6a312b699a7a52780442da736061e7",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "8d4f508af54497ea5f04112b1c66d1c5"
+                ]
+            },
+            {
+                "handle": "a2229df191806a5d97892754caae1535",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "25bdf4cba0b59adfa07dd103d033bca9",
+                    "665509d366ac3c2821b3b6b266f996bd"
+                ]
+            },
+            {
+                "handle": "1158d014a21e0dddf63283ffd29a0f4a",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "2e49bfe7f9b46c1e403b841970205a82",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "76a21d549ea70cda9b5433e7a1f62960",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "8860480382d0ddf62623abf5c860e51d",
+                    "2e49bfe7f9b46c1e403b841970205a82"
+                ]
+            },
+            {
+                "handle": "2e2f6ce7fc5cab22d57d38337bb5d255",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "8860480382d0ddf62623abf5c860e51d",
+                    "3225ea795289574ceee32e091ad54ef4"
+                ]
+            },
+            {
+                "handle": "e954e4d34df63fedbfcc3c855d836dd5",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "25bdf4cba0b59adfa07dd103d033bca9",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "cb6a41354b245d7b7ec9e8786d577df8",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "4e5503971af4768dc3729de9e846a86d"
+                ]
+            },
+            {
+                "handle": "7d7d1d3f8e9e85294db2e45db63b1af3",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "2e49bfe7f9b46c1e403b841970205a82",
+                    "8321bf987d14e3ccbf9aaa6dad1e4755"
+                ]
+            },
+            {
+                "handle": "f2c995e49b9e1e49a0948ae0e429e5e3",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "5e50ef7542bb0fde52aed0d841335790",
+                    "4e5503971af4768dc3729de9e846a86d"
+                ]
+            },
+            {
+                "handle": "12c04a6f20d0aae4879f91331392c91e",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "181a19436acef495c8039a610be59603",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "ba86c981af6ba28249c48d49381491a1",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "181a19436acef495c8039a610be59603",
+                    "3225ea795289574ceee32e091ad54ef4"
+                ]
+            },
+            {
+                "handle": "d610ca5aa289bf532010cb6fe79f754e",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "a408f6dd446cdd4fa56f82e77fe6c870",
+                    "8860480382d0ddf62623abf5c860e51d"
+                ]
+            },
+            {
+                "handle": "a76b4baa701b8d9303c9a2f841a408a1",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "181a19436acef495c8039a610be59603",
+                    "2e49bfe7f9b46c1e403b841970205a82"
+                ]
+            },
+            {
+                "handle": "ecb646aa07a906dc3db6588a1681f13d",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "3225ea795289574ceee32e091ad54ef4",
+                    "181a19436acef495c8039a610be59603"
+                ]
+            },
+            {
+                "handle": "4145f6b52d36258b3f7245bf690edd05",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "3225ea795289574ceee32e091ad54ef4",
+                    "2e49bfe7f9b46c1e403b841970205a82"
+                ]
+            },
+            {
+                "handle": "ce8a3219d718311c5107d11ea00fd045",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "1fc9300891b7a5d6583f0f85a83b9ddb",
+                    "a0426b36b0da5123b25ae7ef8fdf44bb"
+                ]
+            },
+            {
+                "handle": "434d4303c556d94d2774ff70a5140b23",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "a408f6dd446cdd4fa56f82e77fe6c870",
+                    "a0426b36b0da5123b25ae7ef8fdf44bb"
+                ]
+            },
+            {
+                "handle": "68ea071c32d4dbf0a7d8e8e00f2fb823",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "3225ea795289574ceee32e091ad54ef4",
+                    "8860480382d0ddf62623abf5c860e51d"
+                ]
+            },
+            {
+                "handle": "891cf259d6938b3a01dd414432ab4100",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "6872b1cd2cfbc483ac52687852e5f1ad",
+                    "2e49bfe7f9b46c1e403b841970205a82"
+                ]
+            },
+            {
+                "handle": "922dfa325a7c3c67b9d07533317d9094",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "25bdf4cba0b59adfa07dd103d033bca9",
+                    "8d4f508af54497ea5f04112b1c66d1c5"
+                ]
+            },
+            {
+                "handle": "1b9cf222d7a7de396bb2510cfc87b089",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "8860480382d0ddf62623abf5c860e51d",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "7ec8526b8c8f15a6ac55273fedbf694f",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "8860480382d0ddf62623abf5c860e51d",
+                    "181a19436acef495c8039a610be59603"
+                ]
+            },
+            {
+                "handle": "b7bdf8dfb95002d84873913ded031c93",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "a408f6dd446cdd4fa56f82e77fe6c870",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "dfeded9e279785cf27d5bf3525520d12",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "ae7ab1a9791ca0dcbf54ca7955bbdbc9",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "7927a5cc63238c152a848be5efe03741",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "3225ea795289574ceee32e091ad54ef4",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "49e5f2b5d6580eec3a8d7014d542d6f0",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "665509d366ac3c2821b3b6b266f996bd",
+                    "25bdf4cba0b59adfa07dd103d033bca9"
+                ]
+            },
+            {
+                "handle": "a44654b990acba107216f434d80d685c",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "6872b1cd2cfbc483ac52687852e5f1ad",
+                    "ae7ab1a9791ca0dcbf54ca7955bbdbc9"
+                ]
+            },
+            {
+                "handle": "754cafb08c9c1716544801d3ef007c6c",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "665509d366ac3c2821b3b6b266f996bd",
+                    "8321bf987d14e3ccbf9aaa6dad1e4755"
+                ]
+            },
+            {
+                "handle": "05bfd9bb16514f9f95784092431896cd",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "ae7ab1a9791ca0dcbf54ca7955bbdbc9",
+                    "6872b1cd2cfbc483ac52687852e5f1ad"
+                ]
+            },
+            {
+                "handle": "ca5e7b8c74379d31ac2f309a2abb1ee6",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "8d4f508af54497ea5f04112b1c66d1c5",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "ec100d52d081881fc5eca373af9e343c",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "1fc9300891b7a5d6583f0f85a83b9ddb",
+                    "25bdf4cba0b59adfa07dd103d033bca9"
+                ]
+            },
+            {
+                "handle": "98e304ca58dc2b67f3c06f73e2ec0435",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "6872b1cd2cfbc483ac52687852e5f1ad",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            {
+                "handle": "8cf06d71b3ddcd9e78b55b4257f7b1cf",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "0ca31260e280b30d70238d08e150b78d",
+                    "181a19436acef495c8039a610be59603",
+                    "8860480382d0ddf62623abf5c860e51d"
+                ]
+            },
+            {
+                "handle": "d0082be0efc758fd027f10b6a0b01541",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "ae7ab1a9791ca0dcbf54ca7955bbdbc9",
+                    "0bde3a43e8650ca16b0a052c9199e5b6"
+                ]
+            },
+            {
+                "handle": "fd8ad818df7ef070db75d68a7526f0e1",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "8321bf987d14e3ccbf9aaa6dad1e4755",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            }
+        ]
+    ],
+    "query": [
+        [
+            "[('$v1', '6872b1cd2cfbc483ac52687852e5f1ad')]",
+            {
+                "handle": "891cf259d6938b3a01dd414432ab4100",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    {
+                        "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "Inheritance",
+                        "named_type": "Symbol",
+                        "is_literal": false
+                    },
+                    {
+                        "handle": "6872b1cd2cfbc483ac52687852e5f1ad",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"rhino\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    },
+                    {
+                        "handle": "2e49bfe7f9b46c1e403b841970205a82",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"mammal\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    }
+                ]
+            }
+        ],
+        [
+            "[('$v1', '181a19436acef495c8039a610be59603')]",
+            {
+                "handle": "a76b4baa701b8d9303c9a2f841a408a1",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    {
+                        "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "Inheritance",
+                        "named_type": "Symbol",
+                        "is_literal": false
+                    },
+                    {
+                        "handle": "181a19436acef495c8039a610be59603",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"monkey\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    },
+                    {
+                        "handle": "2e49bfe7f9b46c1e403b841970205a82",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"mammal\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    }
+                ]
+            }
+        ],
+        [
+            "[('$v1', '8860480382d0ddf62623abf5c860e51d')]",
+            {
+                "handle": "76a21d549ea70cda9b5433e7a1f62960",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    {
+                        "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "Inheritance",
+                        "named_type": "Symbol",
+                        "is_literal": false
+                    },
+                    {
+                        "handle": "8860480382d0ddf62623abf5c860e51d",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"human\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    },
+                    {
+                        "handle": "2e49bfe7f9b46c1e403b841970205a82",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"mammal\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    }
+                ]
+            }
+        ],
+        [
+            "[('$v1', '3225ea795289574ceee32e091ad54ef4')]",
+            {
+                "handle": "4145f6b52d36258b3f7245bf690edd05",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    {
+                        "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "Inheritance",
+                        "named_type": "Symbol",
+                        "is_literal": false
+                    },
+                    {
+                        "handle": "3225ea795289574ceee32e091ad54ef4",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"chimp\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    },
+                    {
+                        "handle": "2e49bfe7f9b46c1e403b841970205a82",
+                        "type": "Symbol",
+                        "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                        "name": "\"mammal\"",
+                        "named_type": "Symbol",
+                        "is_literal": true
+                    }
+                ]
+            }
+        ]
+    ],
+    "get_incoming_links": [
+        [
+            {
+                "handle": "a9c67752209582b09f2f7e49a72cbac8",
+                "type": "MettaType",
+                "composite_type_hash": "bfa6ab71230b8d98cc24075ead8e31e2",
+                "is_toplevel": false,
+                "composite_type": [
+                    "d08cb315065d08eee7d57f0466304623",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "MettaType",
+                "named_type_hash": "d08cb315065d08eee7d57f0466304623",
+                "targets": [
+                    "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            [
+                {
+                    "handle": "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"dinosaur\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                },
+                {
+                    "handle": "5e50ef7542bb0fde52aed0d841335790",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "Concept",
+                    "named_type": "Symbol",
+                    "is_literal": false
+                }
+            ]
+        ],
+        [
+            {
+                "handle": "2a6a312b699a7a52780442da736061e7",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "8d4f508af54497ea5f04112b1c66d1c5"
+                ]
+            },
+            [
+                {
+                    "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "Inheritance",
+                    "named_type": "Symbol",
+                    "is_literal": false
+                },
+                {
+                    "handle": "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"dinosaur\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                },
+                {
+                    "handle": "8d4f508af54497ea5f04112b1c66d1c5",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"reptile\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                }
+            ]
+        ],
+        [
+            {
+                "handle": "328f72f4a6992aa47d33e70d868468ce",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "5e50ef7542bb0fde52aed0d841335790"
+                ]
+            },
+            [
+                {
+                    "handle": "c8ea657e9367a2c6abda4e34d4500a1d",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": ":",
+                    "named_type": "Symbol",
+                    "is_literal": false
+                },
+                {
+                    "handle": "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"dinosaur\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                },
+                {
+                    "handle": "5e50ef7542bb0fde52aed0d841335790",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "Concept",
+                    "named_type": "Symbol",
+                    "is_literal": false
+                }
+            ]
+        ],
+        [
+            {
+                "handle": "d0082be0efc758fd027f10b6a0b01541",
+                "type": "Expression",
+                "composite_type_hash": "7a7a49e393824be3a6bf2f1486b5c4cc",
+                "is_toplevel": true,
+                "composite_type": [
+                    "a1a6657be79cc0fc1e9b23b9e108f043",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793",
+                    "02c86eb2792f3262c21d030a87e19793"
+                ],
+                "named_type": "Expression",
+                "named_type_hash": "a1a6657be79cc0fc1e9b23b9e108f043",
+                "targets": [
+                    "9028a696c1b6d3d9ff8c4f496da77378",
+                    "ae7ab1a9791ca0dcbf54ca7955bbdbc9",
+                    "0bde3a43e8650ca16b0a052c9199e5b6"
+                ]
+            },
+            [
+                {
+                    "handle": "9028a696c1b6d3d9ff8c4f496da77378",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "Inheritance",
+                    "named_type": "Symbol",
+                    "is_literal": false
+                },
+                {
+                    "handle": "ae7ab1a9791ca0dcbf54ca7955bbdbc9",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"triceratops\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                },
+                {
+                    "handle": "0bde3a43e8650ca16b0a052c9199e5b6",
+                    "type": "Symbol",
+                    "composite_type_hash": "02c86eb2792f3262c21d030a87e19793",
+                    "name": "\"dinosaur\"",
+                    "named_type": "Symbol",
+                    "is_literal": true
+                }
+            ]
+        ]
     ]
-  ],
-  "get_incoming_links": [
-    [
-      {
-        "handle": "16f7e407087bfa0b35b13d13a1aadcae",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "af12f10f9ae2002a1607ba0b47ba8407",
-          "4e8e26e3276af8a5c2ac2cc2dc95c6d2"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "4e8e26e3276af8a5c2ac2cc2dc95c6d2",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "ent",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "a45af31b43ee5ea271214338a5a5bd61",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "4e8e26e3276af8a5c2ac2cc2dc95c6d2",
-          "af12f10f9ae2002a1607ba0b47ba8407"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "4e8e26e3276af8a5c2ac2cc2dc95c6d2",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "ent",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "2c927fdc6c0f1272ee439ceb76a6d1a4",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "5b34c54bee150c04f9fa584b899dc030",
-          "af12f10f9ae2002a1607ba0b47ba8407"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "5b34c54bee150c04f9fa584b899dc030",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "chimp",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "b5459e299a5c5e8662c427f7e01b3bf1",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "af12f10f9ae2002a1607ba0b47ba8407",
-          "5b34c54bee150c04f9fa584b899dc030"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "5b34c54bee150c04f9fa584b899dc030",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "chimp",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "c93e1e758c53912638438e2a7d7f7b7f",
-        "composite_type_hash": "41c082428b28d7e9ea96160f7fd614ad",
-        "is_toplevel": true,
-        "composite_type": [
-          "e40489cd1e7102e35469c937e05c8bba",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Inheritance",
-        "named_type_hash": "e40489cd1e7102e35469c937e05c8bba",
-        "targets": [
-          "af12f10f9ae2002a1607ba0b47ba8407",
-          "bdfe4e7a431f73386f37c6448afe5840"
-        ],
-        "type": "Inheritance"
-      },
-      [
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "bdfe4e7a431f73386f37c6448afe5840",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "mammal",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "2a8a69c01305563932b957de4b3a9ba6",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "1cdffc6b0b89ff41d68bec237481d1e1",
-          "af12f10f9ae2002a1607ba0b47ba8407"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "1cdffc6b0b89ff41d68bec237481d1e1",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "monkey",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ],
-    [
-      {
-        "handle": "bad7472f41a0e7d601ca294eb4607c3a",
-        "composite_type_hash": "ed73ea081d170e1d89fc950820ce1cee",
-        "is_toplevel": true,
-        "composite_type": [
-          "a9dea78180588431ec64d6bc4872fdbc",
-          "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "d99a604c79ce3c2e76a2f43488d5d4c3"
-        ],
-        "named_type": "Similarity",
-        "named_type_hash": "a9dea78180588431ec64d6bc4872fdbc",
-        "targets": [
-          "af12f10f9ae2002a1607ba0b47ba8407",
-          "1cdffc6b0b89ff41d68bec237481d1e1"
-        ],
-        "type": "Similarity"
-      },
-      [
-        {
-          "handle": "af12f10f9ae2002a1607ba0b47ba8407",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "human",
-          "named_type": "Concept",
-          "type": "Concept"
-        },
-        {
-          "handle": "1cdffc6b0b89ff41d68bec237481d1e1",
-          "composite_type_hash": "d99a604c79ce3c2e76a2f43488d5d4c3",
-          "name": "monkey",
-          "named_type": "Concept",
-          "type": "Concept"
-        }
-      ]
-    ]
-  ]
 }
