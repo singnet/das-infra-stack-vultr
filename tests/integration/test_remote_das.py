@@ -19,6 +19,10 @@ class ActionType(str, Enum):
 class TestRemoteDistributedAtomSpace:
     """Integration tests with OpenFaas function on the server"""
 
+    @staticmethod
+    def _to_dict(result):
+        return json.loads(json.dumps(result, indent=4, default=lambda obj: repr(obj)))
+
     @pytest.fixture
     def remote_das(self):
         return DistributedAtomSpace(
@@ -41,13 +45,17 @@ class TestRemoteDistributedAtomSpace:
         elif isinstance(obj, (int, float, str, bool, type(None))):
             return obj
         else:
-            return str(obj)
+            return repr(obj)
 
     @staticmethod
     def _compare_nested(obj1, obj2):
-        return TestRemoteDistributedAtomSpace._sorted_nested(
-            obj1
-        ) == TestRemoteDistributedAtomSpace._sorted_nested(obj2)
+        dict_obj1 = TestRemoteDistributedAtomSpace._to_dict(obj1)
+        dict_obj2 = TestRemoteDistributedAtomSpace._to_dict(obj2)
+
+        sorted_obj1 = TestRemoteDistributedAtomSpace._sorted_nested(dict_obj1)
+        sorted_obj2 = TestRemoteDistributedAtomSpace._sorted_nested(dict_obj2)
+
+        return sorted_obj1 == sorted_obj2
 
     def get_request(self, action: ActionType):
         request_file = f"{os.getenv('TEST_REMOTE_DATABASE')}.json"
@@ -117,26 +125,32 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.GET_LINKS)
 
         result = remote_das.get_links(**payload)
+
+        result = [item for item in result]
+        expected_output = [item for item in expected_output[1]]
+
         assert TestRemoteDistributedAtomSpace._compare_nested(
-            result, expected_output
+            result,
+            expected_output,
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
 
     def test_get_incoming_links(self, remote_das: DistributedAtomSpace):
-        payload = self.get_request(ActionType.GET_INCOMING_LINKS)
+        request_payload = self.get_request(ActionType.GET_INCOMING_LINKS)
         expected_output = self.get_response(ActionType.GET_INCOMING_LINKS)
 
-        result_it = remote_das.get_incoming_links(**payload)
-        
-        result = [r for r in result_it]
-        
+        result = remote_das.get_incoming_links(**request_payload)
+        result_links = [item for item in result]
+        expected_links = [item[0] for item in expected_output]
+
         assert TestRemoteDistributedAtomSpace._compare_nested(
-            result, expected_output
-        ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
+            result_links,
+            expected_links,
+        ), f"Assertion failed:\nResult Links: {result_links}\nExpected Links: {expected_links}"
 
     def test_count_atoms(self, remote_das: DistributedAtomSpace):
-        expected_output = self.get_response(ActionType.COUNT_ATOMS)
+        expected_output = tuple(self.get_response(ActionType.COUNT_ATOMS))
 
-        result = list(remote_das.count_atoms())
+        result = remote_das.count_atoms()
         assert TestRemoteDistributedAtomSpace._compare_nested(
             result, expected_output
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
@@ -146,6 +160,8 @@ class TestRemoteDistributedAtomSpace:
         expected_output = self.get_response(ActionType.QUERY)
 
         result = remote_das.query(**payload)
+
         assert TestRemoteDistributedAtomSpace._compare_nested(
-            result, expected_output
+            result,
+            expected_output,
         ), f"Assertion failed:\nResponse Body: {result}\nExpected: {json.dumps(expected_output)}"
